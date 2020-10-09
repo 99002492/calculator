@@ -2,9 +2,9 @@ name: Valgrind
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -19,5 +19,5 @@ jobs:
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
       run: |
-        make test -C calculator
-        valgrind ./calculator
+        make test -C Applied_SDLC-main/
+        valgrind ./calculator/build/Test_Calculator.out
